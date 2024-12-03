@@ -1,0 +1,41 @@
+{
+  "name": "expo-version-bump",
+  "version": "1.0.0",
+  "description": "A utility to bump Expo app versions and build numbers",
+  "type": "module",
+  "main": "index.js",
+  "bin": {
+    "expo-version-bump": "./cli.js"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
+  },
+  "keywords": [
+    "expo",
+    "version",
+    "bump",
+    "bump-version",
+    "build",
+    "mobile",
+    "react-native"
+  ],
+  "author": "Petr Horacek <petrhoracekdev@gmail.com> (https://github.com/pehoracek)",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pehoracek/expo-version-bump.git"
+  },
+  "bugs": {
+    "url": "https://github.com/pehoracek/expo-version-bump/issues"
+  },
+  "homepage": "https://github.com/pehoracek/expo-version-bump#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.1"
+  }
+}

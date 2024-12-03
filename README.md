@@ -58,29 +58,13 @@ npm run version:patch
 npm run version:minor
 ```
 
-### Programmatic Usage
-
-```javascript
-import { updateExpoVersions } from 'expo-version-bump';
-
-// Basic usage (increment build numbers)
-updateExpoVersions();
-
-// With version increment
-updateExpoVersions({
-  versionType: 'minor',
-  appJsonPath: './custom/path/app.json',
-  packageJsonPath: './custom/path/package.json'
-});
-```
-
 ## Features
 
 - Increment iOS and Android build numbers
 - Optional version bump (patch, minor, major)
 - Supports custom app.json configuration file
 - Configurable file paths
-- Simple CLI and programmatic interfaces
+- Simple CLI
 
 ## License
 

@@ -1,10 +1,6 @@
 #!/usr/bin/env node
 import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
 
 /**
  * Increments a semantic version string
@@ -82,31 +78,4 @@ export function updateExpoVersions(options = {}) {
 
   console.log(`🔢 Updated iOS build number to: ${newIosBuildNumber}`);
   console.log(`🤖 Updated Android build code to: ${newAndroidBuildCode}`);
-}
-
-// CLI handler
-function cli() {
-  const args = process.argv.slice(2);
-
-  // Determine version type and app.json path
-  const versionType = args
-    .find((arg) => ['--major', '--minor', '--patch'].includes(arg))
-    ?.replace('--', '');
-  const customAppJsonPath = args
-    .find((arg) => arg.startsWith('--app-file='))
-    ?.replace('--app-file=', '');
-
-  const options = {
-    ...(versionType && { versionType }),
-    ...(customAppJsonPath && {
-      appJsonPath: path.resolve(process.cwd(), customAppJsonPath),
-    }),
-  };
-
-  updateExpoVersions(options);
-}
-
-// Only run CLI if invoked directly
-if (import.meta.url === `file://${__filename}`) {
-  cli();
 }

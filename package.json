@@ -1,6 +1,6 @@
 {
   "name": "expo-version-bump",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A utility to bump Expo app versions and build numbers",
   "type": "module",
   "main": "index.js",
